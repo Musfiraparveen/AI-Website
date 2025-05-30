@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfume Essence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d6a4a4;
+            --secondary: #fbc2eb;
+            --background: #fff0f5;
+            --text: #3d2c2e;
+            --soft: #ffe8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--text);
+        }
+
+        header {
+            display: flex;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            padding: 19px 30px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: white;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        #home {
+            text-align: center;
+            background: var(--soft);
+            border-radius: 20px;
+            padding: 100px 20px;
+        }
+
+        #home h2 {
+            font-size: 2.5rem;
+            font-family: 'Great Vibes', cursive;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        #home p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        #about,
+        #contact {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-family: 'Great Vibes', cursive;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        #about p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 260px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 15px 0 5px;
+        }
+
+        .product-card p {
+            font-size: 0.9rem;
+            padding: 0 15px 20px;
+            color: #555;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+        }
+
+        form button {
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #b87c7c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--soft);
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #img {
+            object-position: bottom;
+        }
+
+        .nav-link.active {
+            border-bottom: 2px solid white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Perfume Essence</h1>
+        <nav>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#products" class="nav-link">Products</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+    <section id="home">
+        <img src="image/banner.jpg" alt="Perfume Banner" class="banner-img">
+        <h2>Indulge in Fragrance</h2>
+        <p>Discover our handcrafted perfumes designed to evoke elegance and emotion. A fragrance for every soul.</p>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            At <strong>Perfume Essence</strong>, we craft more than just fragrances — we create experiences that linger
+            in memory. Rooted in the art of fine perfumery, our scents are carefully blended using rare, natural
+            ingredients sourced from around the world. Each bottle is a celebration of elegance, emotion, and
+            individuality, designed to match every mood and moment. Inspired by nature’s beauty and the complexity of
+            human expression, our mission is to deliver timeless, luxurious fragrances that awaken the senses and tell
+            your unique story with every spray.
+        </p>
+    </section>
+    <section id="products">
+        <h2>Our Collection</h2>
+        <div class="products">
+            <div class="product-card">
+                <img id="img" src="image/img5.jpg" alt="Floral Blush">
+                <h3>Floral Blush</h3>
+                <p>A romantic mix of rose, peony, and vanilla — soft and feminine.</p>
+            </div>
+            <div class="product-card">
+                <img src="image/img2.jpg" alt="Amber Noir">
+                <h3>Amber Noir</h3>
+                <p>Deep amber, hints of cedar, and a touch of spice. Bold and elegant.</p>
+            </div>
+            <div class="product-card">
+                <img src="image/img1.jpg" alt="Citrus Veil">
+                <h3>Citrus Veil</h3>
+                <p>Zesty citrus and bergamot for a refreshing and clean aura.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        &copy; 2025 Perfume Essence — All Rights Reserved.
+    </footer>
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 80;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
